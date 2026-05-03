@@ -23,8 +23,8 @@ RGSS*.dll
 *.mkproj
 
 # Game specific stuff
+PBS/items*
 PBS/*_torai.txt
-PBS/items_pocket_*.text
 Data/Scripts/950_Torai/
 
 # Operating system generated files & folders
