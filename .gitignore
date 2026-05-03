@@ -22,6 +22,10 @@ RGSS*.dll
 .idea/
 *.mkproj
 
+# Game specific stuff
+PBS/*_torai.txt
+PBS/items_pocket_*.text
+
 # Operating system generated files & folders
 .DS_Store
 .DS_Store?
