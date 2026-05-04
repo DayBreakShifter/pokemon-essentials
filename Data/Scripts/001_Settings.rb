@@ -26,7 +26,7 @@ module Settings
   #   * :multiple  = An infinite number of save slots are always available. The
   #                  player can choose to save in an empty save slot at any
   #                  time, or overwrite an existing save slot.
-  SAVE_SLOTS = :multiple
+  SAVE_SLOTS = :adventure
 
   #-----------------------------------------------------------------------------
   # Credits.
@@ -90,7 +90,7 @@ module Settings
   NEW_BERRY_PLANT_MECHANICS  = (MECHANICS_GENERATION >= 4)
   # Whether fishing automatically hooks the Pokémon (true), or whether there is
   # a reaction test first (false).
-  FISHING_AUTO_HOOK          = false
+  FISHING_AUTO_HOOK          = true
   # The ID of the common event that runs when the player starts fishing (runs
   # instead of showing the casting animation).
   FISHING_BEGIN_COMMON_EVENT = -1
@@ -140,7 +140,7 @@ module Settings
   # The odds of a newly generated Pokémon being shiny (out of 65536).
   SHINY_POKEMON_CHANCE                     = (MECHANICS_GENERATION >= 6) ? 16 : 8
   # Whether super shininess is enabled (uses a different shiny animation).
-  SUPER_SHINY                              = (MECHANICS_GENERATION == 8)
+  SUPER_SHINY                              = true
   # Whether Pokémon with the "Legendary", "Mythical" or "Ultra Beast" flags will
   # have at least 3 perfect IVs.
   LEGENDARIES_HAVE_SOME_PERFECT_IVS        = (MECHANICS_GENERATION >= 6)
@@ -167,7 +167,7 @@ module Settings
   # Whether Pokémon in the Day Care gain Exp for each step the player takes.
   # This should be true for the Day Care and false for the Pokémon Nursery, both
   # of which use the same code in Essentials.
-  DAY_CARE_POKEMON_GAIN_EXP_FROM_WALKING     = (MECHANICS_GENERATION <= 6)
+  DAY_CARE_POKEMON_GAIN_EXP_FROM_WALKING     = true
   # Whether two Pokémon in the Day Care can learn egg moves from each other if
   # they are the same species.
   DAY_CARE_POKEMON_CAN_SHARE_EGG_MOVES       = (MECHANICS_GENERATION >= 8)
@@ -260,7 +260,7 @@ module Settings
   NUM_STORAGE_BOXES   = 40
   # Whether putting a Pokémon into Pokémon storage will heal it. If false, they
   # are healed by the Recover All: Entire Party event command (at Poké Centers).
-  HEAL_STORED_POKEMON = (MECHANICS_GENERATION <= 7)
+  HEAL_STORED_POKEMON = true
 
   #-----------------------------------------------------------------------------
   # Items.
@@ -288,7 +288,7 @@ module Settings
   # If a move taught by a TM/HM/TR replaces another move, this Setting is
   # whether the machine's move retains the replaced move's PP (true), or whether
   # the machine's move has full PP (false).
-  TAUGHT_MACHINES_KEEP_OLD_PP          = (MECHANICS_GENERATION == 5)
+  TAUGHT_MACHINES_KEEP_OLD_PP          = true
   # Whether you get 1 Premier Ball for every 10 of any kind of Poké Ball bought
   # from a Mart at once (true), or 1 Premier Ball for buying 10+ regular Poké
   # Balls (false).
@@ -346,7 +346,7 @@ module Settings
   MORE_ABILITIES_AFFECT_WILD_ENCOUNTERS    = (MECHANICS_GENERATION >= 8)
   # Whether shiny wild Pokémon are more likely to appear if the player has
   # previously defeated/caught lots of other Pokémon of the same species.
-  HIGHER_SHINY_CHANCES_WITH_NUMBER_BATTLED = (MECHANICS_GENERATION == 8)
+  HIGHER_SHINY_CHANCES_WITH_NUMBER_BATTLED = true
   # Whether overworld weather can set the default terrain effect in battle.
   # Storm weather sets Electric Terrain, and fog weather sets Misty Terrain.
   OVERWORLD_WEATHER_SETS_BATTLE_TERRAIN    = (MECHANICS_GENERATION >= 8)

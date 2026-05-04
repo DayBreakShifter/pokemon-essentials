@@ -25,6 +25,7 @@ RGSS*.dll
 # Game specific stuff
 PBS/items*
 PBS/*_torai.txt
+PBS/types.txt
 Data/Scripts/950_Torai/
 
 # Operating system generated files & folders
