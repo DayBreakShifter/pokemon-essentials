@@ -28,6 +28,7 @@ PBS/*_torai.txt
 PBS/types.txt
 Data/Scripts/950_Torai/
 PBS/*_shadow_pkmn.txt
+PBS/shadow_pokemon.txt
 
 # Operating system generated files & folders
 .DS_Store
