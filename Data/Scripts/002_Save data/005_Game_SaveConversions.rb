@@ -71,7 +71,7 @@ SaveData.register_conversion(:v21_add_bump_stat) do
 end
 
 #===============================================================================
-
+=begin
 SaveData.register_conversion(:v22_add_adventure_magic_number) do
   essentials_version 22
   display_title "Adding adventure ID"
@@ -146,3 +146,4 @@ SaveData.register_conversion(:v22_add_new_options) do
     end
   end
 end
+=end
