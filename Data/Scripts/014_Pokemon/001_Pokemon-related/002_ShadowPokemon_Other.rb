@@ -192,7 +192,7 @@ class Battle::Battler
     __shadow__pbInitPokemon(*arg)
     # Called into battle
     if shadowPokemon?
-      self.types = [:SHADOW] if GameData::Type.exists?(:SHADOW)
+      #self.types = [:SHADOW] if GameData::Type.exists?(:SHADOW)
       self.pokemon.change_heart_gauge("battle") if pbOwnedByPlayer?
     end
   end
