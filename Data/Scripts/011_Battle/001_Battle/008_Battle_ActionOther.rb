@@ -171,7 +171,7 @@ class Battle
     side  = battler.idxOwnSide
     owner = pbGetOwnerIndexFromBattlerIndex(idxBattler)
     @megaEvolution[side][owner] = -2
-    MultipleForms.call("changePokemonOnMegaEvolving", battler, battler.pokemon)
+    MultipleForms.call("changePokemonOnMegaEvolving", battler, battler.pokemon, self)
     if battler.isSpecies?(:GENGAR) && battler.mega?
       battler.effects[PBEffects::Telekinesis] = 0
     end

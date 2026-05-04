@@ -496,7 +496,7 @@ MultipleForms.register(:XERNEAS, {
 })
 
 MultipleForms.register(:ZYGARDE, {
-  "changePokemonOnMegaEvolving" => proc { |battler, pkmn|
+  "changePokemonOnMegaEvolving" => proc { |battler, pkmn, battle|
     next if !GameData::Move.exists?(:NIHILLIGHT)
     pkmn_move = nil
     pkmn.moves.each_with_index do |move, i|
@@ -508,7 +508,17 @@ MultipleForms.register(:ZYGARDE, {
     if pkmn_move
       battler.moves.each_with_index do |move, i|
         next if move.id != :COREENFORCER
+        move_pp = battler.moves[i].pp
         battler.moves[i] = Battle::Move.from_pokemon_move(battler.battle, pkmn_move)
+        if battle.choices[battler.index][1] == i
+          move_pp -= 1
+          battle.choices[battler.index][2] = Battle::Move.from_pokemon_move(battle, Pokemon::Move.new(:NIHILLIGHT))
+          battle.pbDisplay(_INTL("{1}'s {2} transformed into {3}!", battler.pbThis,
+                            GameData::Move.get(:COREENFORCER).name, 
+                            GameData::Move.get(:NIHILLIGHT).name
+                          ))
+        end
+        battler.moves[i].pp = move_pp
       end
     end
   },

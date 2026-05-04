@@ -6,7 +6,7 @@ NoTarget = true
 Credit = Maruno
 <User>
 <Ball>
-    Graphic = bubble 1
+    Graphic = Normal/Defense Curl ball
     Focus = User
     SetY = 0,32
     SetZ = 0,10
@@ -21,7 +21,7 @@ Credit = Maruno
     MoveOpacity = 9,4,0
     SetVisible = 13,false
 <Swish>
-    Graphic = swish
+    Graphic = Normal/Defense Curl swish
     Focus = User
     SetY = 7,32
     SetZ = 7,5
