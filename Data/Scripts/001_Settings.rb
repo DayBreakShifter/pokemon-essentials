@@ -311,8 +311,16 @@ module Settings
   # shown in the Area page when viewing that Pokédex list.
   def self.pokedex_names
     return [
-      [_INTL("Kanto Pokédex"), 0],
-      [_INTL("Johto Pokédex"), 1],
+      [_INTL("Regional Pokédex"), 0],
+      [_INTL("Culmen Pokédex"), 1],
+      [_INTL("Lacuna Pokédex"), 2],
+      [_INTL("Astrum Pokédex"), 3],
+      [_INTL("Sealed Island"), 4],
+      [_INTL("Filler"), 5],
+      [_INTL("Filler"), 6],
+      [_INTL("Filler"), 7],
+      [_INTL("Filler"), 8],
+      [_INTL("Filler"), 9],
       _INTL("National Pokédex")
     ]
   end

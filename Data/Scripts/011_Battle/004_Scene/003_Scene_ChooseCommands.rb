@@ -108,7 +108,9 @@ class Battle::Scene
         need_refresh = true
       elsif Input.trigger?(Input::ACTION)   # Toggle Mega Evolution
         if cw.mega_evolution_state > 0
-          pbPlayDecisionSE
+          #pbPlayDecisionSE
+          megaButtonSFX = "Anim/Champions/" + (cw.mega_evolution_state == 1 ? "MegaButton" : "MegaButtonCancel" )
+          pbSEPlay(megaButtonSFX, 100)
           break if yield -2
           need_refresh = true
         end
