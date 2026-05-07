@@ -205,6 +205,7 @@ class UI::PokedexSearchCursor < ChangelingSprite
       case @page
       when :sort_by, :first_letter, :type, :color, :shape
         metrics = UI::PokedexVisuals::BUTTON_GRID_ARRANGEMENTS[@page]
+=begin
         if @index >= @options.length   # Blank/nil button
           blank_index = (((@options.length / metrics[:columns]) + 1) * metrics[:columns]) - 1
           self.x = metrics[:start_pos][0] - 2 + ((blank_index % metrics[:columns]) * (metrics[:size][0] + metrics[:spacing][0]))
@@ -213,6 +214,7 @@ class UI::PokedexSearchCursor < ChangelingSprite
           self.x = metrics[:start_pos][0] - 2 + ((@index % metrics[:columns]) * (metrics[:size][0] + metrics[:spacing][0]))
           self.y = metrics[:start_pos][1] - 2 + ((@index / metrics[:columns]) * (metrics[:size][1] + metrics[:spacing][1]))
         end
+=end
       when :height
         plain_index = (@index >= 100) ? @index - 100 : @index
         self.x = lerp(44, 348, UI::PokedexVisuals::HEIGHT_INTERVALS.length - 1, plain_index)

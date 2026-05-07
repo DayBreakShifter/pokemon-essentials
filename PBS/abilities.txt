@@ -413,7 +413,7 @@ Description = The Pokémon cannot be inflicted with any status conditions in har
 #-------------------------------
 [KLUTZ]
 Name = Klutz
-Description = The Pokémon's clumsiness means it can't use any held items or their effects.
+Description = The Pokémon can't use held items and deals increased damage while confused.
 #-------------------------------
 [MOLDBREAKER]
 Name = Mold Breaker
