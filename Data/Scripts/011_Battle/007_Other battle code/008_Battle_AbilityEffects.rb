@@ -373,6 +373,12 @@ Battle::AbilityEffects::SpeedCalc.add(:UNBURDEN,
   }
 )
 
+Battle::AbilityEffects::SpeedCalc.add(:DEFEATIST,
+  proc { |ability, battler, mult|
+    next mult * 1.5 if battler.hp >= battler.totalhp / 2
+  }
+)
+
 #===============================================================================
 # WeightCalcy handlers
 #===============================================================================
@@ -1438,7 +1444,8 @@ Battle::AbilityEffects::DamageCalcFromUser.add(:BLAZE,
 
 Battle::AbilityEffects::DamageCalcFromUser.add(:DEFEATIST,
   proc { |ability, user, target, move, mults, power, type|
-    mults[:attack_multiplier] /= 2 if user.hp <= user.totalhp / 2
+    mults[:attack_multiplier] *= 1.1 if user.hp >= user.totalhp / 2
+    mults[:attack_multiplier] /= 2 if user.hp <= user.totalhp / 4
   }
 )
 
@@ -1865,6 +1872,12 @@ Battle::AbilityEffects::DamageCalcFromTarget.add(:THICKFAT,
 Battle::AbilityEffects::DamageCalcFromTarget.add(:WATERBUBBLE,
   proc { |ability, user, target, move, mults, power, type|
     mults[:final_damage_multiplier] /= 2 if type == :FIRE
+  }
+)
+
+Battle::AbilityEffects::DamageCalcFromTarget.add(:SLOWSTART,
+  proc { |ability, user, target, move, mults, power, type|
+    mults[:final_damage_multiplier] /= 2 if user.effects[PBEffects::SlowStart] > 0
   }
 )
 
@@ -2900,7 +2913,11 @@ Battle::AbilityEffects::EndOfRoundGainItem.add(:PICKUP,
 # CertainSwitching handlers
 #===============================================================================
 
-# There aren't any!
+Battle::AbilityEffects::TrappingByTarget.add(:RUNAWAY,
+  proc { |ability, switcher, bearer, battle|
+    next true
+  }
+)
 
 #===============================================================================
 # TrappingByTarget handlers
@@ -3485,7 +3502,7 @@ Battle::AbilityEffects::OnSwitchIn.add(:SCREENCLEANER,
 Battle::AbilityEffects::OnSwitchIn.add(:SLOWSTART,
   proc { |ability, battler, battle, switch_in|
     battle.pbShowAbilitySplash(battler)
-    battler.effects[PBEffects::SlowStart] = 5
+    battler.effects[PBEffects::SlowStart] = 3
     if Battle::Scene::USE_ABILITY_SPLASH
       battle.pbDisplay(_INTL("{1} can't get it going!", battler.pbThis))
     else
