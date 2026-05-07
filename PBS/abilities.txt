@@ -201,6 +201,7 @@ Flags = FasterEggHatching
 [RUNAWAY]
 Name = Run Away
 Description = The Pokémon is always able to switch out regardless of an opposing Pokémon's Ability and always flee from battles against wild Pokémon.
+Description = The Pokémon is always able to switch out in battle and flee from wild Pokémon.
 #-------------------------------
 [KEENEYE]
 Name = Keen Eye
@@ -448,7 +449,7 @@ Description = The Pokémon takes less damage from attacks that are "super effect
 #-------------------------------
 [SLOWSTART]
 Name = Slow Start
-Description = For its first three turns, the Pokémon's Attack and Speed stats are halved, but its defense is increased by half.
+Description = Attack and Speed are cut and Defenses are boosted for its first 3 turns.
 #-------------------------------
 [SCRAPPY]
 Name = Scrappy
@@ -516,7 +517,7 @@ Description = The Pokémon sharply raises its Attack stat if its stats are lower
 #-------------------------------
 [DEFEATIST]
 Name = Defeatist
-Description = The Pokémon's Attack and Sp. Atk stats are halved if its HP is at or below a quarter, but it's Attack, Sp. Atk, and Speed are increased a tiny amount above half HP.
+Description = Attack and Sp.Atk are halved if HP is critical, but are boosted above half HP.
 #-------------------------------
 [CURSEDBODY]
 Name = Cursed Body

@@ -1724,7 +1724,7 @@ Accuracy = 0
 TotalPP = 20
 Target = UserAndAllies
 FunctionCode = RaisePlusMinusUserAndAlliesDefSpDef1
-Description = The user manipulates magnetic fields, which raises the Defense and Sp. Def stats of ally Pokémon with the Plus or Minus Ability.
+Description = The user manipulates magnetic fields, which raises the Defense and Sp. Def stats of ally Pokémon with the Electromagnet Ability.
 #-------------------------------
 [THUNDERWAVE]
 Name = Thunder Wave
