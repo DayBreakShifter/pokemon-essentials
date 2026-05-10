@@ -23,8 +23,7 @@ RGSS*.dll
 *.mkproj
 
 # Game specific stuff
-Data/messages_core.dat
-Data/messages_game.dat
+*.dat
 PBS/items*
 PBS/*_torai.txt
 PBS/types.txt
@@ -44,5 +43,3 @@ Thumbs.db
 # Temp files
 
 ~*
-Data/messages_core.dat
-*.dat
