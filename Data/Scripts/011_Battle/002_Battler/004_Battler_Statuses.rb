@@ -570,6 +570,9 @@ class Battle::Battler
     if hasActiveItem?(:DESTINYKNOT) && user.pbCanAttract?(self, false)
       user.pbAttract(self, _INTL("{1} fell in love from the {2}!", user.pbThis(true), itemName))
     end
+    if hasActiveAbility?(:SIRENLURE) && user.pbCanAttract?(self, false)
+      user.pbAttract(self, _INTL("{1} fell in love from the Siren Lure!", user.pbThis(true)))
+    end
     # Attraction cures
     pbItemStatusCureCheck
     pbAbilityStatusCureCheck

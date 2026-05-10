@@ -327,7 +327,7 @@ module Settings
   # An array of numbers, where each number is that of a Dex list (in the same
   # order as above, except the National Dex is -1). All Dex lists included here
   # will begin their numbering at 0 rather than 1 (e.g. Victini in Unova's Dex).
-  DEXES_WITH_OFFSETS                        = []
+  DEXES_WITH_OFFSETS                        = [0, 4]
   # Whether the Pokédex entry of a newly owned species will be shown after it
   # hatches from an egg, after it evolves and after obtaining it from a trade,
   # in addition to after catching it in battle.

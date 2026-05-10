@@ -151,7 +151,7 @@ class PokemonEncounters
             encounter_chance /= 2
             min_steps_needed *= 2
           end
-        when :SANDVEIL
+        when :SANDVEIL, :DESERTSPIRIT
           if GameData::Weather.get($game_screen.weather_type).category == :Sandstorm
             encounter_chance /= 2
             min_steps_needed *= 2

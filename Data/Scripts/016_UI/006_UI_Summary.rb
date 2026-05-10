@@ -382,6 +382,7 @@ class UI::PokemonSummaryVisuals < UI::BaseVisuals
 
   def play_pokemon_cry
     pbSEStop
+    @sprites[:pokemon].pbPlayIntroAnimation
     (@pokemon.egg?) ? pbSEPlay("GUI summary change page") : @pokemon.play_cry
   end
 
@@ -1152,6 +1153,7 @@ class UI::PokemonSummaryVisuals < UI::BaseVisuals
         pbPlayDecisionSE
         return :moves_menu
       else
+        @sprites[:pokemon].pbPlayIntroAnimation
         @pokemon.play_cry if !@pokemon.egg?
       end
     when Input::BACK

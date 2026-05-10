@@ -798,7 +798,7 @@ Battle::AI::Handlers::MoveEffectAgainstTargetScore.add("AttractTarget",
       # Prefer if the target is paralysed or confused, to compound the turn skipping
       attract_score += 5 if target.status == :PARALYSIS || target.effects[PBEffects::Confusion] > 1
       # Don't prefer if the target can infatuate the user because of this move
-      attract_score -= 10 if target.has_active_item?(:DESTINYKNOT) &&
+      attract_score -= 10 if (target.has_active_item?(:DESTINYKNOT) || target.has_active_ability?(:SIRENLURE)) &&
                              user.battler.pbCanAttract?(target.battler, false)
       # Don't prefer if the user has another way to infatuate the target
       attract_score -= 8 if move.statusMove? && user.has_active_ability?(:CUTECHARM)

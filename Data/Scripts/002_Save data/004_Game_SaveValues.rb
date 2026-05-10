@@ -6,7 +6,7 @@ SaveData.register(:player) do
   ensure_class :Player
   save_value { $player }
   load_value { |value| $player = value }
-  new_game_value { Player.new("Unnamed", GameData::TrainerType.keys.first) }
+  new_game_value { Player.new("MissingNO", GameData::TrainerType.keys.first) }
 end
 
 SaveData.register(:game_system) do

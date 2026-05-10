@@ -656,7 +656,7 @@ class Battle::AI
         beneficial_abilities = {
           :Sun       => [:CHLOROPHYLL, :FLOWERGIFT, :FORECAST, :HARVEST, :LEAFGUARD, :SOLARPOWER],
           :Rain      => [:DRYSKIN, :FORECAST, :HYDRATION, :RAINDISH, :SWIFTSWIM],
-          :Sandstorm => [:SANDFORCE, :SANDRUSH, :SANDVEIL],
+          :Sandstorm => [:SANDFORCE, :SANDRUSH, :SANDVEIL, :DESERTSPIRIT],
           :Hail      => [:FORECAST, :ICEBODY, :SLUSHRUSH, :SNOWCLOAK],
           :Snowstorm => [:FORECAST, :ICEBODY, :SLUSHRUSH, :SNOWCLOAK]
         }[weather]

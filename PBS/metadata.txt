@@ -2,9 +2,9 @@
 #-------------------------------
 [0]
 StartMoney = 3000
-StartItemStorage = POTION
+StartItemStorage = POTION,SHINYCHARM
 Home = 3,7,5,8
-StorageCreator = Bill
+StorageCreator = Cinnabar
 WildBattleBGM = Battle wild
 TrainerBattleBGM = Battle trainer
 WildVictoryBGM = Battle victory wild
@@ -13,7 +13,7 @@ SurfBGM = Surfing
 BicycleBGM = Bicycle
 #-------------------------------
 [1]
-TrainerType = POKEMONTRAINER_Red
+TrainerType = PLAYER_M
 WalkCharset = trainer_POKEMONTRAINER_Red
 RunCharset = boy_run
 CycleCharset = boy_bike
@@ -23,7 +23,7 @@ FishCharset = boy_fish_offset
 SurfFishCharset = boy_fish_offset
 #-------------------------------
 [2]
-TrainerType = POKEMONTRAINER_Leaf
+TrainerType = PLAYER_F
 WalkCharset = trainer_POKEMONTRAINER_Leaf
 RunCharset = girl_run
 CycleCharset = girl_bike
@@ -31,3 +31,13 @@ SurfCharset = girl_surf
 DiveCharset = girl_surf
 FishCharset = girl_fish_offset
 SurfFishCharset = girl_fish_offset
+#-------------------------------
+[3]
+TrainerType = PLAYER_X
+WalkCharset = trainer_POKEMONTRAINER_Brendan
+RunCharset = trainer_POKEMONTRAINER_Brendan
+CycleCharset = trainer_POKEMONTRAINER_Brendan
+SurfCharset = trainer_POKEMONTRAINER_Brendan
+DiveCharset = trainer_POKEMONTRAINER_Brendan
+FishCharset = boy_fish_offset
+SurfFishCharset = boy_fish_offset
