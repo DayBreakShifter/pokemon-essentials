@@ -31,6 +31,7 @@ PBS/*_shadow_pkmn.txt
 PBS/shadow_pokemon.txt
 PBS/Animations/
 *.7z
+Data/messages_core.dat
 
 # Operating system generated files & folders
 .DS_Store
