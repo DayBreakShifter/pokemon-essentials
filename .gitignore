@@ -23,6 +23,8 @@ RGSS*.dll
 *.mkproj
 
 # Game specific stuff
+Data/messages_core.dat
+Data/messages_game.dat
 PBS/items*
 PBS/*_torai.txt
 PBS/types.txt
@@ -31,7 +33,6 @@ PBS/*_shadow_pkmn.txt
 PBS/shadow_pokemon.txt
 PBS/Animations/
 *.7z
-Data/messages_core.dat
 
 # Operating system generated files & folders
 .DS_Store
